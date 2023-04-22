@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/store.css">
+    <script>
+        var total;
+function selectItem() {
+    var check1 = document.getElementById("chk1");
+    var check2 = document.getElementById("chk2");
+    var check3 = document.getElementById("chk3");
+    var check4 = document.getElementById("chk4");
+    var check5 = document.getElementById("chk5");
+    var check6 = document.getElementById("chk6");
+    var check7 = document.getElementById("chk7");
+    var check8 = document.getElementById("chk8");
+    var check9 = document.getElementById("chk9");
+    var check10 = document.getElementById("chk10");
+    var check11 = document.getElementById("chk11");
+    var check12 = document.getElementById("chk12");
+    var ttotal = 0;
+
+    if (check1.checked==true) {
+        ttotal += 13990;
+    } 
+    if (check2.checked == true) {
+        ttotal += 21995;
+    }
+    if (check3.checked == true) {
+        ttotal += 14995;
+    }
+    if (check4.checked == true) {
+        ttotal += 14995;
+    }
+    if (check5.checked == true) {
+        ttotal += 17995;
+    }
+    if (check6.checked == true) {
+        ttotal += 14990;
+    }
+    if (check7.checked == true) {
+        ttotal += 9995;
+    }
+    if (check8.checked == true) {
+        ttotal += 14990;
+    }
+    if (check9.checked == true) {
+        ttotal += 44495;
+    }
+    if (check10.checked == true) {
+        ttotal += 21990;
+    }
+    if (check11.checked == true) {
+        ttotal += 10990;
+    }
+    if (check12.checked == true) {
+        ttotal += 10900;
+    }
+     total = document.getElementById("txttotal").value = ttotal;
+}
+    
+
+function Buy() {
+    total;
+    var cash = document.getElementById("cash").value;
+    
+    if (cash < total) {
+        window.alert("Your cash is not enough");
+    } else {
+        var total_change = cash - total;
+        document.getElementById("change").value = total_change;
+        window.alert("You have bought the item Successfully \n Your change is  ₱ " + total_change);
+    }
+}
+
+    </script>
+    <title>Store</title>
+</head>
+<body>
+    <div class="header" id="header">
+        <nav class="nav-container">
+            <ul class="left-navbar">
+                <h1>UrSoft</h1>
+                <li><a href="index.html" class="nav-Home">Home</a></li>
+                <li><a href="store.html" class="nav-Store">Store</a></li>
+                <li><a href="Contact.html" class="nav-Contact">Contact</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="login.html" class="nav-Login">Login</a></li>
+                <li><a href="aboutus.html" class="nav-aboutus">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="cart">
+        <p class="cart-title">Cart</p>
+        <form action="" class="frm-cart">
+            <div class="cart-product">
+                <p class="price">Price (Check to Select Item)</p>
+            <div class="prod1">
+                <input type="checkbox" id="chk1" class="check" onclick="selectItem()">
+                <label for="chk"> &#x20B1; 13,990.00 - MALIA 3-SEATER SOFA (GREEN)</label>
+            </div>
+            <div class="prod2">
+                <input type="checkbox" id="chk2" class="check" onclick="selectItem()">
+                <label for="chk"> &#x20B1; 21,995.00 - WOOLEN 3-SEATER SOFABED <p>(PEACOCK BLUE)</p> </label>
+            </div>
+            <div class="prod3">
+                <input type="checkbox" id="chk3" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 14.995.00 - BARKER SOFABED WITH POCKETS <p>(GINGER YELLOW)</p></label>
+            </div>
+            <div class="prod4">
+                <input type="checkbox" id="chk4" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 14,995.00 - BARKER SOFABED WITH POCKETS <p>(LIGHT GRAY)</p></label>
+            </div>
+            <div class="prod5">
+                <input type="checkbox" id="chk5" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 17,995.00 - BELLAFORT 3-SEATER SOFA <p>(LIGHT BLUE)</p> </label>
+            </div>
+            <div class="prod6">
+                <input type="checkbox" id="chk6" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 14,990.00 - BESSIE 2-SEATER SOFABED <p>(WHITE BOUCLE)</p></label>
+            </div>
+            <div class="prod7">
+                <input type="checkbox" id="chk7" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 9,995.00 - BORDER 2-SEATER SOFA (LIGHT <p>GRAY)</p></label>
+            </div>
+            <div class="prod8">
+                <input type="checkbox" id="chk8" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 14,990.00 - CARSON MID CENTURY TUFTED <p>SOFABED (GRAY)</p></label>
+            </div>
+            <div class="prod9">
+                <input type="checkbox" id="chk9" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 44,495.00 - CHESTERFIELD 3-SEATER
+                    SOFA<p>BLACK FAUX  LEATHER (ASSEMBLED)</p></label>
+            </div>
+            <div class="prod10">
+                <input type="checkbox" id="chk10" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 21,990.00 - CHILEO RATTAN SOFA (BLACK <p>NATURAL)</p></label>
+            </div>
+            <div class="prod11">
+                <input type="checkbox" id="chk11" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 10,900.00 - COLTON ACCENT CHAIR (FABRIC <p>BROWN)</p></label>
+            </div>
+            <div class="prod12">
+                <input type="checkbox" id="chk12" class="check" onclick="selectItem()">
+                <label for="chk">&#x20B1; 10,900.00 - COLTON CLUB ARMCHAIR (BLUE)</label>
+            </div>
+        </div>  
+        <div class="buy">
+            <div>
+                <div>
+                    <p>Cash:</p> <input type="text" class="cash" id="cash">
+                </div>
+                <p>Total:</p><input type="text" class="total" id="txttotal" value="0" disabled>
+            </div>
+            <div>
+                <p>Change:</p><input type="text" class="change" id="change" disabled>
+            </div>
+            <div>
+                <input type="button" class="btn-buy" value="Buy" id="buy" onclick="Buy()">
+            </div>
+            
+        </div>
+        </form>
+       
+    </div>
+    <div class="store-product">
+        <div class="first-row">
+            <div class="product">
+                <div>
+                    <img src="products/product3.jpg" alt="">
+                </div>
+                <div>
+                    <p>MALIA 3-SEATER SOFA (GREEN) 
+                        <br>
+                        &#x20B1; 13,990.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product4.jpg" alt="">
+                </div>
+                <div>
+                    <p>WOOLEN 3-SEATER SOFABED (PEACOCK BLUE) 
+                        <br>
+                        &#x20B1; 21,995.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product5.jpg" alt="">
+                </div>
+                <div>
+                    <p>BARKER SOFABED WITH POCKETS (GINGER YELLOW)
+                        <br>
+                        &#x20B1; 14.995.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product6.png" alt="">
+                </div>
+                <div>
+                    <p>BARKER SOFABED WITH POCKETS (LIGHT GRAY)
+                        <br>
+                        &#x20B1; 14,995.00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="product">
+                <div>
+                    <img src="products/product7.jpg" alt="">
+                </div>
+                <div>
+                    <p>BELLAFORT 3-SEATER SOFA (LIGHT BLUE) 
+                        <br>
+                        &#x20B1; 17,995.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product8.jpg" alt="">
+                </div>
+                <div>
+                    <p>BESSIE 2-SEATER SOFABED (WHITE BOUCLE) 
+                        <br>
+                        &#x20B1; 14,990.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product9.jpg" alt="">
+                </div>
+                <div>
+                    <p>BORDER 2-SEATER SOFA (LIGHT GRAY)
+                        <br>
+                        &#x20B1; 9,995.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product10.jpg" alt="">
+                </div>
+                <div>
+                    <p>CARSON MID CENTURY TUFTED SOFABED (GRAY)
+                        <br>
+                        &#x20B1; 14,990.00
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <div class="product">
+                <div>
+                    <img src="products/product11.jpg" alt="">
+                </div>
+                <div>
+                    <p>CHESTERFIELD 3-SEATER 
+                        <br>
+                        SOFA BLACK FAUX LEATHER (ASSEMBLED)
+                        <br>
+                        &#x20B1; 44,495.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product12.jpg" alt="">
+                </div>
+                <div>
+                    <p>CHILEO RATTAN SOFA (BLACK NATURAL)
+                        <br>
+                        &#x20B1; 21,990.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product13.jpg" alt="">
+                </div>
+                <div>
+                    <p>COLTON ACCENT CHAIR (FABRIC BROWN)
+                        <br>
+                        &#x20B1; 10,900.00
+                    </p>
+                </div>
+            </div>
+            <div class="product">
+                <div>
+                    <img src="products/product14.jpg" alt="">
+                </div>
+                <div>
+                    <p>COLTON CLUB ARMCHAIR (BLUE)
+                        <br>
+                        &#x20B1; 10,900.00
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer class="footer-container">
+            <div class="logo-div">
+                <h1>UrSoft</h1>
+            </div>
+            <div class="footer-buttons">
+                    <p><a href="index.html" class="footer-Home">Home</a></p>
+                    <p><a href="store.html" class="footer-Store">Store</a></p>
+                    <p><a href="Contact.html" class="footer-Contact">Contact</a></p>
+                    <p><a href="aboutus.html" class="footer-Aboutus">About us</a></p>
+            </div>
+            <div class="copyright">
+                <p class="cright">Copyright &copy; 2023 - All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+   
+</body>
+</html>

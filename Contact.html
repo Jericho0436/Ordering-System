@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <script>
+        function post() {
+    var name = document.getElementById("entername").value;
+    var comment = document.getElementById("comment").value;
+
+        if (name === "" && comment === "") {
+            window.alert("Please Input your name and message");
+        } else {
+            let time = new Date();
+            let h = time.getHours(); 
+            let m = time.getMinutes(); 
+            let s = time.getSeconds(); 
+            let d = time.getDate(); 
+            let t = time.getMonth() + 1;
+            let y = time.getFullYear();
+            let now = t + "/" + d + "/" + y +" - " +h + ":" + m + ":" + s;
+
+            document.getElementById("sec1").innerHTML = "Name: " + name + "<br>" + "Date: " + now + "<br>" + "<br>" + comment;
+            clear(); 
+        }   
+    }
+    function clear() {
+        document.getElementById("entername").value = "";
+        document.getElementById("comment").value = "";
+    }
+    </script>
+    
+    <title>Contact</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-container">
+            <ul class="left-navbar">
+                <h1>UrSoft</h1>
+                <li><a href="index.html" class="nav-Home">Home</a></li>
+                <li><a href="store.html" class="nav-Store">Store</a></li>
+                <li><a href="Contact.html" class="nav-Contact">Contact</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="login.html" class="nav-Login">Login</a></li>
+                <li><a href="aboutus.html" class="nav-aboutus">About us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="contact-page">
+        <div class="direct-message">
+            <p class="msg">Message us</p>
+            <p><a href="mailto:mvgener@ccc.edu.ph">mvgener@ccc.edu.ph</a></p>
+            <p><a href="mailto:mvgener@ccc.edu.ph">jvsuarez@ccc.edu.ph</a></p>
+            <p><a href="mailto:mvgener@ccc.edu.ph">vbcaringal@ccc.edu.ph</a></p>
+            <p><a href="mailto:mvgener@ccc.edu.ph">sppamplona@ccc.edu.ph</a></p>
+            <p class="socmed">Social Media</p>
+            <div class="socmed-icon">
+                <div><a href="https://www.facebook.com/vincent.caringal.528" target="_blank"><img src="images/fb.png" alt=""></a></div>
+                <div><a href="https://twitter.com/adrngnr" target="_blank"><img src="images/twitter.png" alt=""></a></div>
+                <div><a href="https://www.instagram.com/_jejejericho" target="_blank"><img src="images/ig.png" alt=""></a></div>
+            </div>
+        </div>
+        <div class="contact-div">
+                <div class="contact-title">
+                    <p>LEAVE A REVIEW OR FEEDBACK</p>
+                </div>
+                <form class="form">
+                    <input type="text" class="name" name="" id="entername" placeholder="Enter Name">
+                    <textarea class="textarea" name="" id="comment" rows="5" placeholder="Comment something.."></textarea>
+                    <div class="btn">
+                        <input type="button" value="Post" onclick="post()" class="btn-buy">
+                        <input type="reset" value="Cancel" onclick="clear()" class="btn-buy">
+                    </div>
+                </form>
+            <div class="contact-box" id="review-box">
+                <p>Comments</p>
+                <div class="comment" id="comsec1">
+                    <ul>
+                        <li id="sec1"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer class="footer-container">
+            <div class="logo-div">
+                <h1>UrSoft</h1>
+            </div>
+            <div class="footer-buttons">
+                    <p><a href="index.html" class="footer-Home">Home</a></p>
+                    <p><a href="store.html" class="footer-Store">Store</a></p>
+                    <p><a href="Contact.html" class="footer-Contact">Contact</a></p>
+                    <p><a href="aboutus.html" class="footer-Aboutus">About us</a></p>
+            </div>
+            <div class="copyright">
+                <p class="cright">Copyright &copy; 2023 - All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
